@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<!-- The body will contain
+     the prompt to begin the quiz, 
+     the 4 questions, possible answers, 
+     a link below indicating "correct" or "incorrect", 
+     a page containing your score with a place to enter your initials, 
+     and a page displaying high scores and prompting you to play again. -->
+<body>
+    <!-- The header will contain a link to view high scores on the left and the timer on the right -->
+<header>
+    <!-- View high scores -->
+    <p class="time"></p>
+</header>
+<main>
+    <section id="start">
+        <h1>Code Quiz</h1>
+        <p>The following quiz will test your knowledge of code with timed mulitple choice questions. 
+        Each question you get wrong will subtract 15 seconds from the timer. 
+        Your final score will be based on the number of seconds remaining on the clock. Are you ready?</p>
+        <button id="start">Start Quiz</button>
+    </section>
+    <section class="hide" id="quiz">
+        <h2 id="text">Quiz question goes here</h2>
+        <div class="buttons"></div>
+    </section>
+    <section class="hide" id="end">
+        <form>
+            <label for="initials">Initials: </label>
+            <input type="text" name="initials" id="initials">
+        </form>
+    </section>
+</main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
