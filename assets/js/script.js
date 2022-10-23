@@ -52,25 +52,26 @@ function askQuestion() {
         button.onclick = function(){
             console.log(this.value);
             if (Q > 4) {
-                if (this.value === questionsArr[Q].answer) {
-                    console.log("correct");
-                } else {
-                    console.log("incorrect");
-                }
                 endQuiz();
+                if (this.value === questionsArr[Q].answer) {
+                    console.log("correct")
+                } else {
+                    console.log("incorrect")
+                }
             } else {
-                askQuestion();
+                Q++;
             }
+
             // if (this.value === questionsArr[Q].answer) {
-            //     console.log("correct")
-            // } else {
-            //     console.log("incorrect")
-            // }
-            // Q++;
-            // if (Q > 4) {
-            //     endQuiz();
-            // }
-            // askQuestion();
+            // //     console.log("correct")
+            // // } else {
+            // //     console.log("incorrect")
+            // // }
+            // // Q++;
+            // // if (Q > 4) {
+            // //     endQuiz();
+            // // }
+            // // askQuestion();
         }
         document.querySelector(".buttons").append(button);
     })
