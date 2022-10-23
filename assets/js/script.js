@@ -51,16 +51,26 @@ function askQuestion() {
         button.setAttribute("value",choice);
         button.onclick = function(){
             console.log(this.value);
-            if (this.value === questionsArr[Q].answer) {
-                console.log("correct")
-            } else {
-                console.log("incorrect")
-            }
-            Q++;
-            if (Q > 5) {
+            if (Q > 4) {
+                if (this.value === questionsArr[Q].answer) {
+                    console.log("correct");
+                } else {
+                    console.log("incorrect");
+                }
                 endQuiz();
+            } else {
+                askQuestion();
             }
-            askQuestion();
+            // if (this.value === questionsArr[Q].answer) {
+            //     console.log("correct")
+            // } else {
+            //     console.log("incorrect")
+            // }
+            // Q++;
+            // if (Q > 4) {
+            //     endQuiz();
+            // }
+            // askQuestion();
         }
         document.querySelector(".buttons").append(button);
     })
