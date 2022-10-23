@@ -3,29 +3,29 @@ var quizEl = document.getElementById("quiz");
 var Q = 0;
 var questionsArr = [
     {
-        text: "Question 1",
-        choices: ["a","b","c","d"],
-        answer: "a"
+        text: "Commonly used data types do NOT include:",
+        choices: ["a. Strings","b. Booleans","c. Alerts","d. Numbers"],
+        answer: "c. Alerts"
     },
     {
-        text: "Question 2",
-        choices: ["a","b","c","d"],
-        answer: "a"
+        text: "The condition in an If/Else statement is enclosed with:",
+        choices: ["a. Quotes","b. Curly Brackets","c. Parenthesis","d. Square Brackets"],
+        answer: "c. Parenthesis"
     },
     {
-        text: "Question 3",
-        choices: ["a","b","c","d"],
-        answer: "a"
+        text: "Arrays in JavaScript can be used to store:",
+        choices: ["a. Numbers and Strings","b. Other Arrays","c. Booleans","d. All of the Above"],
+        answer: "d. All of the Above"
     },
     {
-        text: "Question 4",
-        choices: ["a","b","c","d"],
-        answer: "a"
+        text: "Strings values must be enclosed with _______ when being assigned to variables.",
+        choices: ["a. Commas","b. Curly Brackets","c. Quotes","d. Parenthesis"],
+        answer: "c. Quotes"
     },
     {
-        text: "Question 5",
-        choices: ["a","b","c","d"],
-        answer: "a"
+        text: "A very useful tool used during development and debugging for printing content to the debugger is:",
+        choices: ["a. JavaScript","b. Terminal/GitBash","c. For Loops","d. Console.log"],
+        answer: "d. Console.log"
     },
 ]
 // function to start the quiz
