@@ -28,6 +28,8 @@ var questionsArr = [
         answer: "d. Console.log"
     },
 ]
+var initailsFormEl = document.getElementById("end");
+
 // function to start the quiz
 function startQuiz() {
    document.getElementById("start").setAttribute("class","hide");
@@ -39,7 +41,7 @@ function startQuiz() {
 function timer() {
 
 }
-// function(s) to prompt user input for 4 multiple choice questions
+// function to prompt user input for 5 multiple choice questions
 function askQuestion() {
     document.getElementById("text").textContent=questionsArr[Q].text;
     document.querySelector(".buttons").innerHTML="";
@@ -55,7 +57,7 @@ function askQuestion() {
                 console.log("incorrect")
             }
             Q++;
-            if (Q === undefined) {
+            if (Q > 5) {
                 endQuiz();
             }
             askQuestion();
@@ -66,12 +68,12 @@ function askQuestion() {
 
 // function to display final score and prompt user to enter initials
 function endQuiz() {
-    document.getElementById
+    document.getElementById("end").textContent=initailsFormEl;
 }
 
 // function to store the test score with initials in local storage
 
-// function to displa high scores
+// function to display high scores
 
 // function to prompt user to play again
 start.addEventListener("click", startQuiz);
