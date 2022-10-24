@@ -3,6 +3,11 @@
     font-size: large;
 }
 
+header {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
 .hide {
     display:none;
 }
@@ -25,4 +30,9 @@ main {
 #end {
     text-align: center;
     padding-top: 10%;
+}
+
+.time {
+   padding-right: 20px;
+    text-align: right;
 }

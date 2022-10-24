@@ -3,6 +3,7 @@ var quizEl = document.getElementById("quiz");
 var initialsFormEl = document.getElementById("end");
 var Q = 0;
 var timeEl = document.querySelector(".time");
+var startingSeconds = 75;
 var wrongAnswer = "incorrect";
 var questionsArr = [
     {
@@ -39,10 +40,13 @@ function startQuiz(timeEl) {
    askQuestion();
 }
 
-// function to increment or decrement the timer
-function timer() {
-    
-}
+// // function to increment or decrement the timer
+// setInterval(updateCountdown, 1000);
+// function timer() {
+//     var seconds = startingSeconds % 60;
+//     timeEl.innterHTML = startingSeconds;
+//     startingSeconds--;
+// }
 
 // function to prompt user input for 5 multiple choice questions
 function askQuestion() {
@@ -74,13 +78,13 @@ function askQuestion() {
 function endQuiz() {
     document.getElementById("quiz").remove();
     initialsFormEl.removeAttribute("class");
-    saveHighScore;
+    // saveHighScore();
 }
 
-// // function to store the test score with initials in local storage
-// function saveHighScore() {
-//     // Add the result from the timer below
-//     var yourScore = document.getElementById("initials").value;
+// // // // function to store the test score with initials in local storage
+// // function saveHighScore() {
+// //     // Add the result from the timer below
+// //     var yourScore = document.getElementById("initials").value;
 // }
 
 // function to display high scores
