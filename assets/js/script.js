@@ -37,22 +37,22 @@ function startQuiz(timeEl) {
    document.getElementById("start").setAttribute("class","hide");
    quizEl.removeAttribute("class");
    askQuestion();
-   startTimer();
+//    startTimer();
 }
 
-// // function to increment or decrement the timer
-function startTimer(seconds) {
-    var counter = seconds;
-    var interval = setInterval(() => {
-        console.log(counter);
-        counter--;
-        if (counter < 0) {
-            clearInterval(interval);
-            console.log("Ding!");
-        }
-    }, 1000);
+// // // function to increment or decrement the timer
+// function startTimer(seconds) {
+//     var counter = seconds;
+//     var interval = setInterval(() => {
+//         console.log(counter);
+//         counter--;
+//         if (counter < 0) {
+//             clearInterval(interval);
+//             console.log("Ding!");
+//         }
+//     }, 1000);
 
-}
+// }
 
 // function to prompt user input for 5 multiple choice questions
 function askQuestion() {
