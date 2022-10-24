@@ -51,27 +51,40 @@ function askQuestion() {
         button.setAttribute("value",choice);
         button.onclick = function(){
             console.log(this.value);
-            if (Q > 4) {
-                endQuiz();
-                if (this.value === questionsArr[Q].answer) {
-                    console.log("correct")
-                } else {
-                    console.log("incorrect")
-                }
-            } else {
-                Q++;
-            }
-
+//Orignal code cycles through questions but encounters an error andstops before endQuiz
             // if (this.value === questionsArr[Q].answer) {
-            // //     console.log("correct")
-            // // } else {
-            // //     console.log("incorrect")
-            // // }
-            // // Q++;
-            // // if (Q > 4) {
-            // //     endQuiz();
-            // // }
-            // // askQuestion();
+                // //     console.log("correct")
+                // // } else {
+                    // //     console.log("incorrect")
+                    // // }
+                    // // Q++;
+                    // // if (Q > 4) {
+                        // //     endQuiz();
+                        // // }
+                        // // askQuestion();
+
+//2nd attempt fails to cycle through the questions and gets stuck on the first one.   
+            // if (Q > 4) {
+            //     endQuiz();
+            //     if (this.value === questionsArr[Q].answer) {
+            //         console.log("correct")
+            //     } else {
+            //         console.log("incorrect")
+            //     }
+            // } else {
+            //     Q++;
+            // }
+
+// 3rd attempt fails in the same manner as the second attemnpt
+            if (this.value === questionsArr[Q].answer) {
+                console.log("correct")
+            } else if (this.value !== questionsArr[Q].answer) {
+                console.log("incorrect")
+            } else if (Q > 4) {
+                endQuiz();
+            } else {
+                askQuestion();
+            }
         }
         document.querySelector(".buttons").append(button);
     })
