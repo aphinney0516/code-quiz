@@ -18,7 +18,7 @@
 <body>
     <!-- The header will contain a link to view high scores on the left and the timer on the right -->
 <header>
-    <!-- View high scores -->
+    <!-- <a href="./assets/html/highscores.html">View high scores</a> -->
     <p class="time"></p>
 </header>
 <main>
@@ -34,9 +34,11 @@
         <div class="buttons"></div>
     </section>
     <section class="hide" id="end">
-        <form>
+        <h2>Quiz Complete!</h2>
+        <form name="initials" action="index.html" method="post">
             <label for="initials">Initials: </label>
             <input type="text" name="initials" id="initials">
+            <input type="submit" onclick="saveHighScore">
         </form>
     </section>
 </main>

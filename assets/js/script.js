@@ -2,6 +2,8 @@ var start = document.querySelector("#start");
 var quizEl = document.getElementById("quiz");
 var initialsFormEl = document.getElementById("end");
 var Q = 0;
+var timeEl = document.querySelector(".time");
+var wrongAnswer = "incorrect";
 var questionsArr = [
     {
         text: "Commonly used data types do NOT include:",
@@ -31,7 +33,7 @@ var questionsArr = [
 ]
 
 // function to start the quiz
-function startQuiz() {
+function startQuiz(timeEl) {
    document.getElementById("start").setAttribute("class","hide");
    quizEl.removeAttribute("class");
    askQuestion();
@@ -39,8 +41,9 @@ function startQuiz() {
 
 // function to increment or decrement the timer
 function timer() {
-
+    
 }
+
 // function to prompt user input for 5 multiple choice questions
 function askQuestion() {
     document.getElementById("text").textContent=questionsArr[Q].text;
@@ -70,10 +73,15 @@ function askQuestion() {
 // function to display final score and prompt user to enter initials
 function endQuiz() {
     document.getElementById("quiz").remove();
-    document.getElementById("end").textContent=initialsFormEl;
+    initialsFormEl.removeAttribute("class");
+    saveHighScore;
 }
 
 // function to store the test score with initials in local storage
+function saveHighScore() {
+    // Add the result from the timer below
+    var yourScore = document.getElementById("initials").value;
+}
 
 // function to display high scores
 
