@@ -3,7 +3,6 @@ var quizEl = document.getElementById("quiz");
 var initialsFormEl = document.getElementById("end");
 var Q = 0;
 var timeEl = document.querySelector(".time");
-var startingSeconds = 75;
 var wrongAnswer = "incorrect";
 var questionsArr = [
     {
@@ -38,15 +37,22 @@ function startQuiz(timeEl) {
    document.getElementById("start").setAttribute("class","hide");
    quizEl.removeAttribute("class");
    askQuestion();
+   startTimer();
 }
 
 // // function to increment or decrement the timer
-// setInterval(updateCountdown, 1000);
-// function timer() {
-//     var seconds = startingSeconds % 60;
-//     timeEl.innterHTML = startingSeconds;
-//     startingSeconds--;
-// }
+function startTimer(seconds) {
+    var counter = seconds;
+    var interval = setInterval(() => {
+        console.log(counter);
+        counter--;
+        if (counter < 0) {
+            clearInterval(interval);
+            console.log("Ding!");
+        }
+    }, 1000);
+
+}
 
 // function to prompt user input for 5 multiple choice questions
 function askQuestion() {
