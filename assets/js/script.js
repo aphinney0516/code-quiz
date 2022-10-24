@@ -1,5 +1,6 @@
 var start = document.querySelector("#start");
 var quizEl = document.getElementById("quiz");
+var initialsFormEl = document.getElementById("end");
 var Q = 0;
 var questionsArr = [
     {
@@ -28,7 +29,6 @@ var questionsArr = [
         answer: "d. Console.log"
     },
 ]
-var initailsFormEl = document.getElementById("end");
 
 // function to start the quiz
 function startQuiz() {
@@ -51,36 +51,13 @@ function askQuestion() {
         button.setAttribute("value",choice);
         button.onclick = function(){
             console.log(this.value);
-//Orignal code cycles through questions but encounters an error andstops before endQuiz
-            // if (this.value === questionsArr[Q].answer) {
-                // //     console.log("correct")
-                // // } else {
-                    // //     console.log("incorrect")
-                    // // }
-                    // // Q++;
-                    // // if (Q > 4) {
-                        // //     endQuiz();
-                        // // }
-                        // // askQuestion();
-
-//2nd attempt fails to cycle through the questions and gets stuck on the first one.   
-            // if (Q > 4) {
-            //     endQuiz();
-            //     if (this.value === questionsArr[Q].answer) {
-            //         console.log("correct")
-            //     } else {
-            //         console.log("incorrect")
-            //     }
-            // } else {
-            //     Q++;
-            // }
-
-// 3rd attempt fails in the same manner as the second attemnpt
             if (this.value === questionsArr[Q].answer) {
                 console.log("correct")
-            } else if (this.value !== questionsArr[Q].answer) {
+            } else {
                 console.log("incorrect")
-            } else if (Q > 4) {
+            } 
+            Q++;
+            if (Q > 4) {
                 endQuiz();
             } else {
                 askQuestion();
@@ -92,7 +69,8 @@ function askQuestion() {
 
 // function to display final score and prompt user to enter initials
 function endQuiz() {
-    document.getElementById("end").textContent=initailsFormEl;
+    document.getElementById("quiz").remove();
+    document.getElementById("end").textContent=initialsFormEl;
 }
 
 // function to store the test score with initials in local storage
