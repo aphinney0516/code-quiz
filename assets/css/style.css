@@ -1,3 +1,8 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+}
+
 .hide {
     display:none;
 }
@@ -5,4 +10,19 @@
 main {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.startQuiz {
+    text-align: center;
+    padding-top: 10%;
+}
+
+#quiz {
+    text-align: center;
+    padding-top: 10%;
+}
+
+#end {
+    text-align: center;
+    padding-top: 10%;
 }

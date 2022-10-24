@@ -77,11 +77,11 @@ function endQuiz() {
     saveHighScore;
 }
 
-// function to store the test score with initials in local storage
-function saveHighScore() {
-    // Add the result from the timer below
-    var yourScore = document.getElementById("initials").value;
-}
+// // function to store the test score with initials in local storage
+// function saveHighScore() {
+//     // Add the result from the timer below
+//     var yourScore = document.getElementById("initials").value;
+// }
 
 // function to display high scores
 
